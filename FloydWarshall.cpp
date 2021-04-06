@@ -7,11 +7,11 @@ vector<vector<int>>FloydWarshall(vector<vector<int>>& graph)
     
     vector<vector<int>>dist=graph;
     
-    for(int k=0;k<V;k++)
+    for(int k=0;k<V;k++) //intermediate vertex
     {
-        for(int i=0;i<V;i++)
+        for(int i=0;i<V;i++)   //source vertex
         {
-            for(int j=0;j<V;j++)
+            for(int j=0;j<V;j++)  //destination vertex
             {
                 if(dist[i][j] > dist[i][k]+dist[k][j])
                 {
